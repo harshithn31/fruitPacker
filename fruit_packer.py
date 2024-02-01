@@ -1,0 +1,48 @@
+import math 
+class fruitPacker:
+    def __init__(self, typesOfFruits, fruitsPerPack):
+        self.typesOfFruits = typesOfFruits
+        self.fruitsPerPack = fruitsPerPack
+        self.fruitsPerType = fruitsPerPack
+        self.totalFruits = typesOfFruits * fruitsPerPack
+        
+    # def print_combination(self):
+    #     rows = self.result
+    #     print(rows)
+    #     columns = self.typesOfFruits
+    #     matrix = [[0 for x in range(columns)] for y in range(rows)] #2d array of zeros, inner array is column, outer array is row. Before for loop the value to be assigned is mentioned
+    #     print(matrix)
+    #     for i in range (rows):
+    #         for j in range (columns):
+    #             matrix[i][j] = i+1
+    #     return
+     
+# def factorial(num):
+#     #factorial
+#     result = 1
+#     for n in range (num,1,-1):
+#         result *= n
+#     return result
+def call_sesquence(noOfFruits, noOfFruitsPerPack):
+    obj1 = fruitPacker(noOfFruits, noOfFruitsPerPack)
+    obj1.combinaton()
+    obj1.print_combination()
+    return
+        
+def main():
+    typesOfFruit = int(input("Enter the number of fruits[eg: apple, banana, grapes]: "))
+    fruitPerbox = int(input("Enter the number of fruits per pack: "))
+    print("Typed of fruits: ",typesOfFruit)
+    print("Fruits per Pack: ",fruitPerbox)
+    call_sesquence(typesOfFruit, fruitPerbox)
+    return 
+def test():
+    x=int(input("X: "))
+    y=int(input("Y: "))
+    array = np.ndarray(shape=(x,y))  
+    array.fill(0)
+    print(array.shape) 
+    print(array)
+if __name__ == '__main__':
+    test()
+    #main()
