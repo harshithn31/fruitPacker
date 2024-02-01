@@ -5,7 +5,13 @@ class fruitPacker:
         self.fruitsPerPack = fruitsPerPack
         self.fruitsPerType = fruitsPerPack
         self.totalFruits = typesOfFruits * fruitsPerPack
-        
+        self.totalcombinations = 0
+    
+    def combination(self):
+        for pick_type in range (1, self.fruitsPerPack):
+            result = math.comb(self.typesOfFruits, pick_type)
+            if pick_type > 1 :
+                result *= self.typesOfFruits-pick_type 
     # def print_combination(self):
     #     rows = self.result
     #     print(rows)
@@ -17,16 +23,10 @@ class fruitPacker:
     #             matrix[i][j] = i+1
     #     return
      
-# def factorial(num):
-#     #factorial
-#     result = 1
-#     for n in range (num,1,-1):
-#         result *= n
-#     return result
+
 def call_sesquence(noOfFruits, noOfFruitsPerPack):
     obj1 = fruitPacker(noOfFruits, noOfFruitsPerPack)
-    obj1.combinaton()
-    obj1.print_combination()
+    
     return
         
 def main():
@@ -36,13 +36,6 @@ def main():
     print("Fruits per Pack: ",fruitPerbox)
     call_sesquence(typesOfFruit, fruitPerbox)
     return 
-def test():
-    x=int(input("X: "))
-    y=int(input("Y: "))
-    array = np.ndarray(shape=(x,y))  
-    array.fill(0)
-    print(array.shape) 
-    print(array)
+
 if __name__ == '__main__':
-    test()
-    #main()
+    main()
