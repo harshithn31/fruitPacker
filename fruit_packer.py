@@ -29,7 +29,6 @@ class fruitPacker:
     #             matrix[i][j] = i+1
     #     return
      
-
 def call_sesquence(noOfFruits, noOfFruitsPerPack):
     obj1 = fruitPacker(noOfFruits, noOfFruitsPerPack)
     
