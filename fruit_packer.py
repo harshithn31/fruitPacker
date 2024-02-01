@@ -10,8 +10,14 @@ class fruitPacker:
     def combination(self):
         for pick_type in range (1, self.fruitsPerPack):
             result = math.comb(self.typesOfFruits, pick_type)
-            if pick_type > 1 :
-                result *= self.typesOfFruits-pick_type 
+            ###################################################################
+            # need to fil this part
+            if pick_type > 1:
+                result *= self.typesOfFruits-pick_type
+            ###################################################################
+            ###################################################################
+            self.totalcombinations += result
+             
     # def print_combination(self):
     #     rows = self.result
     #     print(rows)
